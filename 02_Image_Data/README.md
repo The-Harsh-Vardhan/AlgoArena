@@ -5,13 +5,15 @@
 **Fashion-MNIST** is a dataset of Zalando's article images consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes.
 
 ### Dataset Details:
+
 - **Training samples**: 60,000
-- **Test samples**: 10,000  
+- **Test samples**: 10,000
 - **Image size**: 28×28 pixels
 - **Channels**: 1 (grayscale)
 - **Classes**: 10 fashion categories
 
 ### Fashion Categories:
+
 0. T-shirt/top
 1. Trouser
 2. Pullover
@@ -26,12 +28,14 @@
 ## 🤖 Algorithms Implemented
 
 ### Traditional Machine Learning:
+
 1. **K-Nearest Neighbors (KNN)** - Instance-based learning
 2. **Random Forest** - Ensemble method with decision trees
 3. **Support Vector Machine (SVM)** - Kernel-based classification
 4. **Logistic Regression** - Linear classification model
 
 ### Deep Learning:
+
 5. **Convolutional Neural Network (CNN)** - Custom architecture with multiple conv layers
 
 ## 📁 Files
@@ -42,11 +46,13 @@
 ## 🚀 Running the Analysis
 
 1. **Open the notebook**:
+
    ```bash
    jupyter notebook 02_Image_Data_Complete.ipynb
    ```
 
 2. **Run all cells** to:
+
    - Load and explore the Fashion-MNIST dataset
    - Train all algorithms
    - Generate performance comparisons
@@ -71,12 +77,12 @@ The CNN typically achieves the highest accuracy (~92%) but requires the most tra
 
 ## 📈 Performance Expectations
 
-| Algorithm           | Expected Accuracy | Training Time | Notes                    |
-| ------------------- | ---------------- | ------------- | ------------------------ |
-| CNN                 | ~92%             | ~3 minutes    | Best accuracy            |
-| Random Forest       | ~88%             | ~15 seconds   | Good balance             |
-| SVM                 | ~87%             | ~45 seconds   | Memory intensive         |
-| KNN                 | ~85%             | ~2 seconds    | Fast inference           |
-| Logistic Regression | ~84%             | ~8 seconds    | Fastest training         |
+| Algorithm           | Expected Accuracy | Training Time | Notes            |
+| ------------------- | ----------------- | ------------- | ---------------- |
+| CNN                 | ~92%              | ~3 minutes    | Best accuracy    |
+| Random Forest       | ~88%              | ~15 seconds   | Good balance     |
+| SVM                 | ~87%              | ~45 seconds   | Memory intensive |
+| KNN                 | ~85%              | ~2 seconds    | Fast inference   |
+| Logistic Regression | ~84%              | ~8 seconds    | Fastest training |
 
-*Note: Results may vary based on hardware and subset sizes used for training.*
+_Note: Results may vary based on hardware and subset sizes used for training._

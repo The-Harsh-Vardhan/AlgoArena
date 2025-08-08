@@ -100,7 +100,7 @@ AlgoArena/
 
 ### 🔴 Planned:
 
--  Text Data (Sentiment analysis, classification)
+- Text Data (Sentiment analysis, classification)
 - ⏰ Time Series (Stock prices, weather forecasting)
 - 🎵 Audio Data (Speech recognition, music classification)
 - 🕸️ Graph Data (Social networks, molecule analysis)
