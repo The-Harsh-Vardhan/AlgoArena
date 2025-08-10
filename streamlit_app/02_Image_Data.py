@@ -9,13 +9,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import fashion_mnist
 
-# Page configuration
-st.set_page_config(
-    page_title="Image Data Analysis - AlgoArena",
-    page_icon="🖼️",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+# Note: set_page_config is called in the main app.py file
 
 # Custom CSS
 st.markdown("""
@@ -59,13 +53,13 @@ def load_fashion_mnist():
 @st.cache_data
 def load_results():
     try:
-        with open('../data/image_results.json', 'r') as f:
+        with open('../02_Image_Data/image/image_results.json', 'r') as f:
             data = json.load(f)
         return data
     except FileNotFoundError:
         # Try alternative path
         try:
-            with open('data/image_results.json', 'r') as f:
+            with open('02_Image_Data/image/image_results.json', 'r') as f:
                 data = json.load(f)
             return data
         except FileNotFoundError:

@@ -3,15 +3,20 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.1+-orange.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red.svg)
-![XGBoost](https://img.shields.io/badge/XGBoost-Enabled-green.svg)
-![Status](https://img.shields.io/badge/Status-In%20Development-yellow.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-brightgreen.svg)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 
-Welcome to **AlgoArena** - the ultimate machine learning battlefield! This comprehensive platform compares the performance of various ML algorithms across different types of datasets. From tabular data to images, text, time series, audio, and graphs - we test them all!
+Welcome to **AlgoArena** - the ultimate machine learning battlefield! This comprehensive platform compares the performance of various ML algorithms across **tabular data** and **image classification** tasks.
 
 ## 🎯 Project Overview
 
-AlgoArena is designed to provide a comprehensive comparison of machine learning algorithms across diverse data types. Each module focuses on a specific data domain, implementing multiple algorithms and providing detailed performance analysis with interactive visualizations.
+AlgoArena provides comprehensive machine learning analysis with two specialized modules:
+
+1. **📊 Tabular Data Analysis**: Compare algorithms on structured datasets
+2. **🖼️ Image Classification**: Test deep learning and traditional ML on image data
+
+The platform focuses on providing detailed performance comparisons, interactive visualizations, and educational insights into how different algorithms perform on real-world datasets.
 
 ---
 
@@ -20,46 +25,36 @@ AlgoArena is designed to provide a comprehensive comparison of machine learning 
 ```
 AlgoArena/
 │
-├── 01_Tabular_Data/
-│   ├── 01_Tabular_Data_algorithms.ipynb     # Tabular data ML algorithms
+├── 📊 01_Tabular_Data/
+│   ├── 01_Tabular_Data_algorithms.ipynb     # Complete tabular data analysis
 │   ├── Dataset/                             # Adult Income dataset files
 │   └── README.md                            # Tabular data documentation
 │
-├── 02_Image_Data/
+├── 🖼️ 02_Image_Data/
 │   ├── 02_Image_Data_Complete.ipynb         # Complete Fashion-MNIST analysis
-│   └── image/                               # Generated images and visualizations
+│   ├── image/                               # Generated images and visualizations
+│   ├── README.md                            # Image data documentation
+│   └── QUICK_START.md                       # Quick start guide
 │
-├── 03_Text_Data/
-│   └── (Coming Soon - NLP and text classification)
-│
-├── 04_TimeSeries_Data/
-│   └── (Coming Soon - Time series forecasting algorithms)
-│
-├── 05_Audio_Data/
-│   └── (Coming Soon - Audio processing and classification)
-│
-├── 06_Graph_Data/
-│   └── (Coming Soon - Graph neural networks and analysis)
-│
-├── streamlit_app/
+├── 🌐 streamlit_app/
 │   ├── app.py                               # Main Streamlit application
 │   ├── 01_Tabular_Data.py                   # Tabular data dashboard
 │   ├── 02_Image_Data.py                     # Image data dashboard
 │   └── requirements.txt                     # Streamlit dependencies
 │
-├── utils/
-│   └── (Shared utilities and helper functions)
+├── 🛠️ utils/
+│   ├── preprocessing.py                     # Data preprocessing utilities
+│   └── visualization.py                    # Visualization utilities
 │
 ├── requirements.txt                         # Project dependencies
-├── .gitignore                              # Git ignore rules
 └── README.md                               # Project documentation
 ```
 
 ## 🎯 Project Goals
 
-� **Algorithm Comparison**: Implement and compare 15+ ML algorithms across different data types
-� **Performance Analysis**: Detailed evaluation using multiple metrics (accuracy, precision, recall, F1-score, ROC-AUC)
-📈 **Interactive Dashboards**: Streamlit-powered visualizations for easy result interpretation
+📊 **Algorithm Comparison**: Implement and compare 15+ ML algorithms across two data types
+📈 **Performance Analysis**: Detailed evaluation using multiple metrics (accuracy, precision, recall, F1-score, ROC-AUC)
+🖥️ **Interactive Dashboards**: Streamlit-powered visualizations for easy result interpretation
 🧠 **Learning Platform**: Hands-on experience with diverse ML techniques and datasets
 🔄 **Reproducible Research**: Well-documented code and standardized evaluation procedures
 
@@ -81,7 +76,7 @@ AlgoArena/
   - LightGBM
   - CatBoost
 
-### � Completed: Image Data Analysis
+### 🟢 Completed: Image Data Analysis
 
 - **Dataset**: Fashion-MNIST
 - **Problem Type**: Multi-class Classification (10 fashion categories)
@@ -93,49 +88,55 @@ AlgoArena/
   - Logistic Regression
   - Convolutional Neural Network (CNN)
 
-### �🟡 In Progress:
-
-- Interactive Streamlit dashboard improvements
-- Performance optimization and analysis
-
-### 🔴 Planned:
-
-- Text Data (Sentiment analysis, classification)
-- ⏰ Time Series (Stock prices, weather forecasting)
-- 🎵 Audio Data (Speech recognition, music classification)
-- 🕸️ Graph Data (Social networks, molecule analysis)
-
 ## 🚀 Getting Started
+
+### Quick Start
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/The-Harsh-Vardhan/AlgoArena.git
+   cd AlgoArena
+   ```
+
+2. **Quick launch options:**
+
+   ```bash
+   # Launch main dashboard
+   run_dashboard.bat
+
+   # Or launch image analysis specifically
+   run_image_analysis.bat
+   ```
+
+3. **Manual setup:**
+   ```bash
+   pip install -r requirements.txt
+   streamlit run streamlit_app/app.py
+   ```
 
 ### Prerequisites
 
 ```bash
 Python 3.8+
-pip or conda package manager
+pip package manager
 ```
 
 ### Installation
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/your-username/AlgoArena.git
-   cd AlgoArena
-   ```
-
-2. **Install dependencies:**
+1. **Install dependencies:**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run Jupyter notebooks:**
+2. **Run Jupyter notebooks:**
 
    ```bash
    jupyter notebook 01_Tabular_Data/01_Tabular_Data_algorithms.ipynb
    ```
 
-4. **Launch Streamlit dashboard:**
+3. **Launch Streamlit dashboard:**
    ```bash
    streamlit run streamlit_app/app.py
    ```
@@ -144,11 +145,18 @@ pip or conda package manager
 
 ### Algorithm Coverage
 
+**Tabular Data:**
+
 - **Traditional ML**: Logistic Regression, SVM, Decision Trees, Random Forest
 - **Ensemble Methods**: XGBoost, LightGBM, CatBoost
 - **Instance-based**: K-Nearest Neighbors
 - **Probabilistic**: Naive Bayes
-- **Deep Learning**: Neural Networks (planned)
+
+**Image Data:**
+
+- **Deep Learning**: Convolutional Neural Networks (CNN)
+- **Traditional ML**: Random Forest, SVM, KNN, Logistic Regression
+- **Feature Extraction**: HOG, LBP, statistical features
 
 ### Evaluation Metrics
 
@@ -165,7 +173,7 @@ pip or conda package manager
 - Algorithm ranking by different metrics
 - Feature importance plots
 - ROC and PR curve overlays
-- Hyperparameter tuning results
+- Image classification visualizations
 
 ## 🛠️ Technologies Used
 
@@ -174,6 +182,7 @@ pip or conda package manager
 - **Python 3.8+** - Primary programming language
 - **Scikit-learn** - Traditional ML algorithms
 - **XGBoost, LightGBM, CatBoost** - Advanced gradient boosting
+- **TensorFlow/Keras** - Deep learning models
 - **Pandas & NumPy** - Data manipulation and analysis
 
 ### Visualization & UI:
@@ -225,7 +234,7 @@ Contributions are welcome! Here's how you can help:
 ### Ideas for Contributions:
 
 - Implement new algorithms
-- Add new data domains
+- Add new datasets
 - Improve visualizations
 - Optimize performance
 - Add more evaluation metrics
@@ -248,15 +257,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - **UCI Machine Learning Repository** - For providing excellent datasets
+- **Fashion-MNIST creators** - For the image classification dataset
 - **Scikit-learn community** - For comprehensive ML algorithms
 - **Streamlit team** - For the amazing web app framework
 - **Open source ML community** - For continuous innovation
 
 ## 📞 Contact
 
-- **GitHub**: [@your-username](https://github.com/your-username)
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)
-- **Email**: your.email@example.com
+- **GitHub**: [@The-Harsh-Vardhan](https://github.com/The-Harsh-Vardhan)
+- **Project Link**: [https://github.com/The-Harsh-Vardhan/AlgoArena](https://github.com/The-Harsh-Vardhan/AlgoArena)
 
 ---
 

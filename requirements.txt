@@ -1,24 +1,27 @@
-# Core Data Science Libraries
-pandas>=1.5.0
-numpy>=1.21.0
-scikit-learn>=1.1.0
+# Core ML and Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
 
-# Plotting for Result Visualization
-matplotlib>=3.5.0
-seaborn>=0.11.0
-plotly>=5.0.0
+# Advanced ML algorithms
+xgboost>=1.7.0
+lightgbm>=4.0.0
+catboost>=1.2.0
 
-# ML Algorithms
-xgboost>=1.6.0
-lightgbm>=3.3.0
-catboost>=1.0.0
+# Deep Learning for Image Analysis
+tensorflow>=2.13.0
+keras>=2.13.0
 
-# Deep Learning
-tensorflow>=2.10.0
-
-# Web App
+# Web Interface
 streamlit>=1.28.0
 
-# Jupyter and notebook support
+# Development and Analysis
 jupyter>=1.0.0
-ipykernel>=6.0.0
+
+# Additional utilities
+pillow>=10.0.0
+requests>=2.31.0
+tqdm>=4.65.0

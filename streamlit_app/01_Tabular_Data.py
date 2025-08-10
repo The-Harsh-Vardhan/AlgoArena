@@ -5,7 +5,7 @@ import os
 import plotly.express as px
 import plotly.graph_objects as go
 
-st.set_page_config(page_title="ML Model Comparison – Tabular Data", layout="wide")
+# Note: set_page_config is called in the main app.py file
 
 st.title("📊 Tabular ML Model Comparison")
 st.subheader("See how different models performed on the Adult dataset")
