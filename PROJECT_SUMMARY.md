@@ -4,6 +4,8 @@
 
 **AlgoArena** is a comprehensive, production-ready machine learning platform specialized for tabular data analysis. The project enables users to upload datasets and automatically perform machine learning analysis with multiple algorithms, comprehensive visualizations, and detailed performance comparisons.
 
+**🌟 Live Demo Available**: [Try AlgoArena Now →](https://algo-arena.streamlit.app/)
+
 ## 🚀 Current Status: **PRODUCTION READY** ✅
 
 ### Version: 3.0.0 (August 2025)

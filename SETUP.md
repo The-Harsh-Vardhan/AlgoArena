@@ -2,6 +2,8 @@
 
 This comprehensive guide will help you set up AlgoArena on your system and get started with machine learning analysis.
 
+> **🌟 Want to try AlgoArena instantly?** Skip the installation and **[try our live demo](https://algo-arena.streamlit.app/)** - no setup required!
+
 ## 📋 Prerequisites
 
 ### System Requirements

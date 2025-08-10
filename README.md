@@ -1,9 +1,49 @@
 # � AlgoArena
 
+<div aliAlgoArena is a comprehensive machine learning platform that transforms the way you approach data analysis. Whether you're a seasoned data scientist or just starting your ML journey, AlgoArena provides an intuitive, powerful environment to explore, analyze, and understand your datasets.
+
 <div align="center">
 
-![AlgoArena Logo](images/logo.png)
-_Coming Soon - Logo will be added here_
+### 🎯 **Try AlgoArena Now - No Installation Required!**
+
+[![🚀 Launch Live Demo](https://img.shields.io/badge/🚀%20Launch%20Live%20Demo-Try%20AlgoArena%20Now-brightgreen.svg?style=for-the-badge)](https://algo-arena.streamlit.app/)
+
+_Upload your dataset and get instant ML insights in seconds!_
+
+</div>
+
+![AlgoArena Dashboard](images/dashboard_overview.png)
+\*Main Dashboard Interface - Upload any dataset and get instan### 🌐 Online Pres## 🎉 Get Started Today!
+
+Transform your data analysis workflow with AlgoArena's Dynamic ML Analyzer. Upload any dataset and get instant, professional ML analysis without writing a single line of code!
+
+<div align="center">
+
+### 🌟 Two Ways to Get Started:
+
+[![🚀 Try Live Demo](https://img.shields.io/badge/🚀%20Try%20Live%20Demo-No%20Installation%20Required-brightgreen.svg?style=for-the-badge)](https://algo-arena.streamlit.app/)
+[![💻 Install Locally](https://img.shields.io/badge/💻%20Install%20Locally-Full%20Control-blue.svg?style=for-the-badge)](#️-installation)
+
+</div>
+
+### ⚡ Option 1: Instant Demo (Recommended)
+
+```bash
+# Just click the link - no installation needed!
+🌐 https://algo-arena.streamlit.app/
+```
+
+### ⚡ Option 2: Local Installation
+
+````bash
+# One-liner installation and launch
+git clone https://github.com/The-Harsh-Vardhan/AlgoArena.git && cd AlgoArena && pip install -r streamlit_app/requirements.txt && streamlit run streamlit_app/app.py
+```**[GitHub Repository](https://github.com/The-Harsh-Vardhan/AlgoArena)** - Source code and issues
+- **[🚀 Live Demo](https://algo-arena.streamlit.app/)** - Try it online now!
+- **[Documentation Site](https://the-harsh-vardhan.github.io/AlgoArena)** - Full documentation (Coming Soon)insights*center">
+
+![AlgoArena Logo](images/AlgoArena%20Logo.png)
+*AlgoArena - The Ultimate Machine Learning Playground*
 
 **The Ultimate Machine Learning Playground for Data Scientists & Enthusiasts**
 
@@ -12,9 +52,10 @@ _Coming Soon - Logo will be added here_
 [![scikit-learn](https://img.shields.io/badge/sklearn-1.3+-orange.svg)](https://scikit-learn.org/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)](https://github.com/The-Harsh-Vardhan/AlgoArena)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Try%20Now-brightgreen.svg)](https://algo-arena.streamlit.app/)
 [![GitHub Stars](https://img.shields.io/github/stars/The-Harsh-Vardhan/AlgoArena?style=social)](https://github.com/The-Harsh-Vardhan/AlgoArena/stargazers)
 
-[🚀 Quick Start](#-quick-start) • [✨ Features](#-features) • [📊 Demo](#-demo) • [🛠️ Installation](#️-installation) • [🤝 Contributing](#-contributing)
+[🚀 Try Live Demo](https://algo-arena.streamlit.app/) • [✨ Features](#-features) • [📊 Screenshots](#-demo) • [🛠️ Installation](#️-installation) • [🤝 Contributing](#-contributing)
 
 </div>
 
@@ -24,15 +65,15 @@ _Coming Soon - Logo will be added here_
 
 AlgoArena is a comprehensive machine learning platform that transforms the way you approach data analysis. Whether you're a seasoned data scientist or just starting your ML journey, AlgoArena provides an intuitive, powerful environment to explore, analyze, and understand your datasets.
 
-![AlgoArena Dashboard](images/dashboard_overview.png)
-_Main Dashboard Interface - Upload any dataset and get instant ML insights_
+![AlgoArena Home Page](images/AlgoArena%20Home%20Page.png)
+*Main Dashboard Interface - Navigate between Dynamic Analyzer and Pre-loaded Analysis*
 
 ## 🚀 Dynamic ML Analyzer
 
 **The game-changing feature**: Upload your own tabular dataset (CSV/Excel/JSON) and get instant ML analysis!
 
-![Dynamic Analyzer Demo](images/dynamic_analyzer_demo.gif)
-_Dynamic ML Analyzer in Action - From upload to insights in seconds_
+![Dynamic ML Analyser](images/Dynamic%20ML%20Analyser.png)
+*Dynamic ML Analyzer Interface - Upload datasets and get comprehensive analysis*
 
 ### ✨ Key Features:
 
@@ -77,12 +118,12 @@ AlgoArena now offers two types of tabular data analysis:
 
 | Feature                        | Screenshot                                                                                                                     |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| **Main Dashboard**             | ![Main Dashboard](images/main_dashboard.png)<br>_Navigate between Dynamic Analyzer and Pre-loaded Analysis_                    |
-| **File Upload Interface**      | ![Upload Interface](images/upload_interface.png)<br>_Drag & drop your CSV, Excel, or JSON files_                               |
-| **Algorithm Comparison**       | ![Algorithm Results](images/algorithm_comparison.png)<br>_Side-by-side performance comparison of all algorithms_               |
-| **Performance Metrics**        | ![Performance Dashboard](images/performance_metrics.png)<br>_Detailed metrics including accuracy, precision, recall, F1-score_ |
-| **Interactive Visualizations** | ![Interactive Charts](images/interactive_charts.png)<br>_Plotly-powered charts for deep insights_                              |
-| **Results Export**             | ![Export Options](images/export_results.png)<br>_Download comprehensive analysis results as CSV_                               |
+| **Main Dashboard**             | ![AlgoArena Home Page](images/AlgoArena%20Home%20Page.png)<br>*Navigate between Dynamic Analyzer and Pre-loaded Analysis*                    |
+| **Dynamic ML Analyzer**      | ![Dynamic ML Analyser](images/Dynamic%20ML%20Analyser.png)<br>*Upload datasets and run comprehensive ML analysis*                               |
+| **Adult Dataset Analysis**       | ![Adult Dataset Analysis](images/Adult%20Dataset%20Analysis.png)<br>*Pre-loaded analysis with comprehensive model comparison*               |
+| **Iris Dataset Analysis**        | ![Iris Dataset Analysis](images/Iris%20Dataset%20Analysis.png)<br>*Classic machine learning dataset analysis example* |
+| **Performance Visualizations** | ![Model Accuracy Comparison](images/Model%20Accuracy%20Comparison.png)<br>*Interactive accuracy comparison charts* |
+| **Metrics Analysis** | ![All Metrics Line Chart](images/All%20Metrics%20Line%20Chart.png)<br>*Comprehensive performance metrics visualization* |
 
 </div>
 
@@ -93,51 +134,83 @@ _Complete workflow: Upload → Analyze → Visualize → Export_
 
 ### 📈 Sample Analysis Results
 
-Below are examples of the insights AlgoArena provides:
+Below are real examples of the comprehensive insights AlgoArena provides:
 
-#### Algorithm Performance Comparison
+#### Adult Income Dataset Analysis
+![Adult Dataset Analysis](images/Adult%20Dataset%20Analysis.png)
+*Complete analysis of the Adult Income dataset showing model performance comparison, metrics, and visualizations*
 
-![Performance Comparison Chart](images/performance_comparison_chart.png)
-_Visual comparison showing which algorithms work best for your data_
+#### Iris Classification Analysis
+![Iris Dataset Analysis](images/Iris%20Dataset%20Analysis.png)
+*Classic Iris dataset classification with algorithm comparison and detailed performance metrics*
 
-#### Training Time vs Accuracy Analysis
+#### Performance Visualization Examples
 
-![Time vs Accuracy](images/time_accuracy_analysis.png)
-_Find the optimal balance between speed and performance_
+**Model Accuracy Comparison**
+![Model Accuracy Comparison](images/Model%20Accuracy%20Comparison.png)
+*Interactive bar chart comparing accuracy scores across different ML algorithms*
 
-#### Feature Importance Analysis
+**F1-Score Performance Analysis**
+![F1 Score Comparison](images/F1%20Score%20Comparison.png)
+*Detailed F1-Score comparison with color-coded performance metrics*
 
-![Feature Importance](images/feature_importance.png)
-_Understand which features drive your model's predictions_
+**Comprehensive Metrics Overview**
+![All Metrics Line Chart](images/All%20Metrics%20Line%20Chart.png)
+*Line chart visualization showing all performance metrics across algorithms for easy comparison*
 
 ---
 
 ## �📁 Project Structure
 
-```
+````
+
 AlgoArena/
 │
 ├── 🤖 streamlit_app/
-│   ├── app.py                               # Main Streamlit application
-│   ├── dynamic_ml_analyzer.py               # 🆕 Dynamic dataset analyzer
-│   ├── 01_Tabular_Data.py                   # Adult Income analysis
-│   └── requirements.txt                     # Streamlit dependencies
+│ ├── app.py # Main Streamlit application
+│ ├── dynamic_ml_analyzer.py # 🆕 Dynamic dataset analyzer
+│ ├── 01_Tabular_Data.py # Adult Income analysis
+│ └── requirements.txt # Streamlit dependencies
 │
 ├── 📊 01_Tabular_Data/
-│   ├── 01_Tabular_Data_algorithms.ipynb     # Complete tabular analysis
-│   ├── Dataset/                             # Adult Income dataset
-│   └── README.md                            # Documentation
+│ ├── 01_Tabular_Data_algorithms.ipynb # Complete tabular analysis
+│ ├── Dataset/ # Adult Income dataset
+│ └── README.md # Documentation
 │
 ├── 🛠️ utils/
-│   ├── preprocessing.py                     # Data preprocessing utilities
-│   └── visualization.py                    # Visualization utilities
+│ ├── preprocessing.py # Data preprocessing utilities
+│ └── visualization.py # Visualization utilities
 │
-└── 📋 requirements.txt                      # Project dependencies
-```
+└── 📋 requirements.txt # Project dependencies
+
+````
 
 ## 🚀 Quick Start
 
-### 🎯 Option 1: Dynamic ML Analyzer (Recommended)
+### � Option 1: Try Live Demo (Recommended - No Setup Required!)
+
+**Experience AlgoArena instantly without any installation:**
+
+<div align="center">
+
+[![🚀 Open Live Demo](https://img.shields.io/badge/🚀%20Open%20Live%20Demo-algo--arena.streamlit.app-brightgreen.svg?style=for-the-badge)](https://algo-arena.streamlit.app/)
+
+**[🌟 Try AlgoArena Live →](https://algo-arena.streamlit.app/)**
+
+</div>
+
+**Using the live demo:**
+1. 🌐 Click the link above to open AlgoArena in your browser
+2. 📁 Select "Dynamic ML Analyzer" from the sidebar
+3. 📤 Upload your CSV/Excel/JSON dataset
+4. 🎯 Choose your target column
+5. ▶️ Click "Run ML Analysis"
+6. 📊 Explore results and download your analysis!
+
+![Quick Start Guide](images/quick_start_guide.png)
+*Step-by-step visual guide to get started*
+
+### 🖥️ Option 2: Local Installation
 
 Get instant insights from your own datasets in under 2 minutes!
 
@@ -151,7 +224,7 @@ pip install -r streamlit_app/requirements.txt
 
 # 3️⃣ Launch the application
 streamlit run streamlit_app/app.py
-```
+````
 
 **Then simply:**
 
@@ -161,8 +234,8 @@ streamlit run streamlit_app/app.py
 4. Click "Run ML Analysis"
 5. Explore results and download your analysis!
 
-![Quick Start Guide](images/quick_start_guide.png)
-_Step-by-step visual guide to get started_
+![Dynamic ML Analyser](images/Dynamic%20ML%20Analyser.png)
+_Step-by-step visual guide: Upload data → Select target → Run analysis → Explore results_
 
 ### 📊 Option 2: Explore Pre-loaded Analysis
 
@@ -173,6 +246,9 @@ Want to see AlgoArena in action first? Try our pre-loaded Adult Income dataset a
 # Navigate to "Tabular Data" in the sidebar
 # Explore the comprehensive Adult Income dataset analysis
 ```
+
+![Adult Dataset Analysis](images/Adult%20Dataset%20Analysis.png)
+_Pre-loaded Adult Income dataset analysis with 9 algorithms compared_
 
 ## 🛠️ Installation
 
@@ -350,18 +426,18 @@ _Detailed regression analysis with residual plots_
 
 #### Performance Comparison Charts
 
-![Algorithm Performance Comparison](images/algorithm_performance.png)
-_Side-by-side comparison of all algorithms with confidence intervals_
+![Model Accuracy Comparison](images/Model%20Accuracy%20Comparison.png)
+_Interactive bar charts comparing accuracy scores across different ML algorithms_
 
-#### Training Efficiency Analysis
+#### F1-Score Analysis
 
-![Training Time vs Performance](images/efficiency_analysis.png)
-_Find the optimal balance between speed and accuracy_
+![F1 Score Comparison](images/F1%20Score%20Comparison.png)
+_Detailed F1-Score comparison with color-coded performance visualization_
 
-#### Cross-Validation Results
+#### Comprehensive Metrics Overview
 
-![Cross-Validation Scores](images/cv_results.png)
-_Robust performance estimation with statistical significance_
+![All Metrics Line Chart](images/All%20Metrics%20Line%20Chart.png)
+_Multi-metric line chart showing performance trends across all algorithms_
 
 ## 🎯 Use Cases & Applications
 
