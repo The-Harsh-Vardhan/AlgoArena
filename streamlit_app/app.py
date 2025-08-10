@@ -10,77 +10,116 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 def load_module(module_name):
     """Safely load and execute a module file with proper encoding handling."""
     try:
-        # Try UTF-8 first
-        with open(f"{module_name}.py", "r", encoding="utf-8") as f:
-            code = f.read()
-    except UnicodeDecodeError:
-        try:
-            # Fallback to latin-1
-            with open(f"{module_name}.py", "r", encoding="latin-1") as f:
-                code = f.read()
-        except UnicodeDecodeError:
-            # Final fallback to cp1252 (Windows default)
-            with open(f"{module_name}.py", "r", encoding="cp1252", errors="ignore") as f:
-                code = f.read()
+        # Import modules directly instead of using exec for better scope handling
+        if module_name == "dynamic_ml_analyzer":
+            import dynamic_ml_analyzer
+            dynamic_ml_analyzer.main()
+        elif module_name == "01_Tabular_Data":
+            # Simple and reliable approach for tabular data module
+            try:
+                # Read and execute the file directly
+                module_path = os.path.join(os.path.dirname(__file__), "01_Tabular_Data.py")
+                with open(module_path, "r", encoding="utf-8") as f:
+                    code = f.read()
+                
+                # Create a proper execution environment
+                exec_globals = globals().copy()
+                exec_globals.update({
+                    '__name__': '__main__',
+                    '__file__': module_path
+                })
+                
+                exec(code, exec_globals)
+                
+            except FileNotFoundError:
+                st.error(f"01_Tabular_Data module not found. Please ensure 01_Tabular_Data.py exists in the streamlit_app folder.")
+                return
+            except Exception as e:
+                st.error(f"Error executing 01_Tabular_Data module: {str(e)}")
+                return
+        else:
+            # For other modules, use the exec method
+            try:
+                # Try UTF-8 first
+                with open(f"{module_name}.py", "r", encoding="utf-8") as f:
+                    code = f.read()
+            except UnicodeDecodeError:
+                try:
+                    # Fallback to latin-1
+                    with open(f"{module_name}.py", "r", encoding="latin-1") as f:
+                        code = f.read()
+                except UnicodeDecodeError:
+                    # Final fallback to cp1252 (Windows default)
+                    with open(f"{module_name}.py", "r", encoding="cp1252", errors="ignore") as f:
+                        code = f.read()
+            
+            exec(code)
     except FileNotFoundError:
         st.error(f"{module_name} module not found. Please ensure {module_name}.py exists in the streamlit_app folder.")
         return
-    
-    try:
-        exec(code)
     except Exception as e:
         st.error(f"Error executing {module_name} module: {str(e)}")
+        return
 
 # Set page configuration
 st.set_page_config(
-    page_title="AlgoArena - ML Algorithm Comparison",
+    page_title="AlgoArena - Dynamic Tabular ML Platform",
     page_icon="🏟️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Main title
-st.title("🏟️ AlgoArena: Machine Learning Algorithm Comparison Platform")
+st.title("🏟️ AlgoArena: Dynamic Tabular ML Platform")
 
 # Sidebar for navigation
-st.sidebar.title("📊 Choose Data Type")
-data_type = st.sidebar.selectbox(
-    "Select the type of data analysis:",
-    ["🏠 Home", "📊 Tabular Data", "🖼️ Image Data"]
+st.sidebar.title("📊 Choose Analysis Type")
+analysis_type = st.sidebar.selectbox(
+    "Select the type of analysis:",
+    ["🏠 Home", "🤖 Dynamic ML Analyzer", "📊 Tabular Data (Adult Dataset)"]
 )
 
 # Home page
-if data_type == "🏠 Home":
+if analysis_type == "🏠 Home":
     st.markdown("""
     ## Welcome to AlgoArena! 🎉
     
-    The ultimate machine learning battlefield where algorithms compete across different data types.
+    The ultimate dynamic machine learning platform for tabular data analysis.
     
-    ### 🎯 What can you do here?
+    ### 🚀 Dynamic ML Analyzer
     
-    - **📊 Tabular Data Analysis**: Compare ML algorithms on structured datasets
-    - **🖼️ Image Classification**: Test image recognition algorithms on Fashion-MNIST
+    **Upload your own tabular dataset and get instant ML analysis!**
+    - 📁 Support for CSV, Excel, JSON files
+    - 🔍 Automatic problem type detection (classification/regression)
+    - 🤖 7+ ML algorithms automatically applied
+    - 📊 Interactive visualizations and comparisons
+    - 📥 Downloadable results
     
-    ### 🚀 Quick Start
+    ### 🎯 Analysis Options
     
-    1. Choose a data type from the sidebar
-    2. Explore the pre-loaded datasets and analysis
-    3. Compare algorithm performance
-    4. Learn from detailed visualizations
+    1. **🤖 Dynamic ML Analyzer** - Upload ANY tabular dataset for instant analysis
+    2. **📊 Tabular Data** - Pre-loaded Adult Income dataset analysis
     
-    ### 📈 Featured Algorithms
+    ### 📈 Supported Algorithms
     
-    **Tabular Data:**
-    - Logistic Regression, Random Forest, XGBoost, LightGBM
-    - SVM, Decision Trees, Naive Bayes, KNN
-    - CatBoost and more
+    **Classification:**
+    - Random Forest, Logistic Regression, SVM
+    - KNN, Naive Bayes, Decision Tree, Gradient Boosting
     
-    **Image Data:**
-    - Convolutional Neural Networks (CNN)
-    - Traditional ML: Random Forest, SVM, KNN
-    - Logistic Regression with feature extraction
+    **Regression:**
+    - Random Forest, Linear Regression, SVR
+    - KNN, Decision Tree, Gradient Boosting
     
-    Select a data type from the sidebar to begin! 👈
+    ### 🎯 Key Features
+    
+    ✅ **Intelligent Data Preprocessing**
+    ✅ **Automatic Algorithm Selection**
+    ✅ **Interactive Visualizations**
+    ✅ **Performance Comparisons**
+    ✅ **Downloadable Results**
+    ✅ **No Coding Required**
+    
+    **Get started by selecting an analysis type from the sidebar!** 👈
     """)
     
     # Display project statistics
@@ -88,30 +127,30 @@ if data_type == "🏠 Home":
     
     with col1:
         st.metric(
-            label="📊 Data Types",
+            label="🤖 Analysis Types",
             value="2",
-            help="Tabular and Image data analysis"
+            help="Dynamic and Tabular analysis"
         )
     
     with col2:
         st.metric(
-            label="🤖 Algorithms",
-            value="15+",
-            help="Machine learning algorithms implemented"
+            label="🧠 Algorithms",
+            value="7+",
+            help="Machine learning algorithms available"
         )
     
     with col3:
         st.metric(
-            label="📈 Metrics",
-            value="20+",
-            help="Performance metrics tracked"
+            label="📁 File Formats",
+            value="3",
+            help="CSV, Excel, JSON supported"
         )
     
     with col4:
         st.metric(
-            label="🎯 Accuracy",
-            value="90%+",
-            help="Best achieved accuracy"
+            label="🎯 Problem Types",
+            value="2",
+            help="Classification and Regression"
         )
     
     # Feature highlights
@@ -121,6 +160,16 @@ if data_type == "🏠 Home":
     
     with col1:
         st.markdown("""
+        ### 🤖 Dynamic ML Analyzer
+        - Upload any tabular dataset (CSV/Excel/JSON)
+        - Automatic preprocessing
+        - Intelligent algorithm selection
+        - Real-time performance comparison
+        - Download analysis results
+        """)
+    
+    with col2:
+        st.markdown("""
         ### 📊 Tabular Data Analysis
         - Adult Income dataset analysis
         - 9 ML algorithms comparison
@@ -128,23 +177,13 @@ if data_type == "🏠 Home":
         - Feature importance analysis
         - Cross-validation results
         """)
-    
-    with col2:
-        st.markdown("""
-        ### 🖼️ Image Classification
-        - Fashion-MNIST dataset
-        - CNN and traditional ML
-        - Image preprocessing pipeline
-        - Visual performance comparison
-        - Model accuracy analysis
-        """)
 
 # Load the appropriate module based on selection
-elif data_type == "📊 Tabular Data":
-    load_module("01_Tabular_Data")
+elif analysis_type == "🤖 Dynamic ML Analyzer":
+    load_module("dynamic_ml_analyzer")
 
-elif data_type == "🖼️ Image Data":
-    load_module("02_Image_Data")
+elif analysis_type == "📊 Tabular Data (Adult Dataset)":
+    load_module("01_Tabular_Data")
 
 # Footer
 st.sidebar.markdown("---")
@@ -154,23 +193,23 @@ st.sidebar.markdown("[Documentation](https://github.com/The-Harsh-Vardhan/AlgoAr
 
 # Additional info in sidebar
 st.sidebar.markdown("---")
-st.sidebar.markdown("### ℹ️ About")
+st.sidebar.markdown("### ℹ️ About AlgoArena")
 st.sidebar.markdown("""
-**AlgoArena** is a comprehensive machine learning platform for comparing algorithm performance across different data types.
+**AlgoArena** is a dynamic machine learning platform specialized for tabular data analysis!
 
-**Focus Areas:**
-- 📊 Tabular Data Analysis
-- 🖼️ Image Classification
+**Key Features:**
+- 🤖 Upload your own tabular datasets
+- 📊 Automatic ML analysis
+-  Interactive visualizations
+- 📥 Downloadable results
 
 Built with:
-- 🐍 Python
-- 📊 Streamlit
+- 🐍 Python & Streamlit
 - 🧠 Scikit-learn
-- 📈 Plotly
-- 🤖 TensorFlow/Keras
+- 📊 Plotly & Pandas
 """)
 
 # Version info
 st.sidebar.markdown("---")
-st.sidebar.markdown("**Version:** 2.0.0")
+st.sidebar.markdown("**Version:** 3.0.0 - Tabular Focused Edition")
 st.sidebar.markdown("**Last Updated:** August 2025")
