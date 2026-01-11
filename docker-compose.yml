@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  algoarena:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: algoarena-app
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount volumes for persistent data
+      - ./01_Tabular_Data/Dataset:/app/01_Tabular_Data/Dataset
+      - ./uploads:/app/uploads
+      # Mount catboost_info for training data persistence
+      - ./01_Tabular_Data/catboost_info:/app/01_Tabular_Data/catboost_info
+      # Mount tabular results
+      - ./01_Tabular_Data/tabular:/app/01_Tabular_Data/tabular
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+    restart: unless-stopped
+    networks:
+      - algoarena-network
+
+networks:
+  algoarena-network:
+    driver: bridge

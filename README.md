@@ -9,12 +9,13 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![scikit-learn](https://img.shields.io/badge/sklearn-1.3+-orange.svg)](https://scikit-learn.org/)
+[![Docker](https://img.shields.io/badge/Docker-Available-2496ED.svg?logo=docker&logoColor=white)](https://hub.docker.com/r/harshv777/algoarena)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)](https://github.com/The-Harsh-Vardhan/AlgoArena)
 [![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Try%20Now-brightgreen.svg)](https://algo-arena.streamlit.app/)
 [![GitHub Stars](https://img.shields.io/github/stars/The-Harsh-Vardhan/AlgoArena?style=social)](https://github.com/The-Harsh-Vardhan/AlgoArena/stargazers)
 
-[🚀 Try Live Demo](https://algo-arena.streamlit.app/) • [✨ Features](#-features) • [📊 Screenshots](#-demo) • [🛠️ Installation](#️-installation) • [🤝 Contributing](#-contributing)
+[🚀 Try Live Demo](https://algo-arena.streamlit.app/) • [🐳 Docker](#-docker-quick-start) • [✨ Features](#-features) • [📊 Screenshots](#-demo) • [🛠️ Installation](#️-installation) • [🤝 Contributing](#-contributing)
 
 </div>
 
@@ -208,16 +209,64 @@ For Windows users, we provide a convenient batch script:
 
 ```bash
 # Run the batch script for automatic setup
-setup_and_run.bat
+run_dashboard.bat
 ```
 
-### Docker Installation (Coming Soon)
+---
+
+## 🐳 Docker Quick Start
+
+**The fastest way to run AlgoArena - no Python installation required!**
+
+### Prerequisites
+- Docker Desktop installed ([Download here](https://www.docker.com/products/docker-desktop/))
+
+### Quick Run
 
 ```bash
-# Docker support coming soon
-docker pull algoarena/ml-analyzer
-docker run -p 8501:8501 algoarena/ml-analyzer
+# Pull and run in one command
+docker run -p 8501:8501 harshv777/algoarena:latest
 ```
+
+Then open your browser to: **http://localhost:8501**
+
+### Using Docker Compose
+
+1. **Create a `docker-compose.yml` file** (or use the one in this repo):
+
+```yaml
+version: '3.8'
+services:
+  algoarena:
+    image: harshv777/algoarena:latest
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./models:/app/models
+    restart: unless-stopped
+```
+
+2. **Run the container:**
+
+```bash
+docker-compose up -d
+```
+
+### With Data Persistence
+
+```bash
+docker run -p 8501:8501 \
+  -v $(pwd)/uploads:/app/uploads \
+  -v $(pwd)/models:/app/models \
+  harshv777/algoarena:latest
+```
+
+### Docker Hub
+
+🐳 **Docker Image**: [harshv777/algoarena](https://hub.docker.com/r/harshv777/algoarena)
+
+For detailed Docker instructions, see [Extras/DOCKER_GUIDE.md](Extras/DOCKER_GUIDE.md)
 
 ---
 
