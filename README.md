@@ -10,6 +10,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![scikit-learn](https://img.shields.io/badge/sklearn-1.3+-orange.svg)](https://scikit-learn.org/)
 [![Docker](https://img.shields.io/badge/Docker-Available-2496ED.svg?logo=docker&logoColor=white)](https://hub.docker.com/r/harshv777/algoarena)
+[![CI/CD](https://github.com/The-Harsh-Vardhan/AlgoArena/actions/workflows/ci.yml/badge.svg)](https://github.com/The-Harsh-Vardhan/AlgoArena/actions)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)](https://github.com/The-Harsh-Vardhan/AlgoArena)
 [![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Try%20Now-brightgreen.svg)](https://algo-arena.streamlit.app/)
